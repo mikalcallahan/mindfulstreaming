@@ -104,4 +104,4 @@ export default {
 };
 </script>
 
-<style src="./webplayer.scss" lang="scss" scoped></style>
+<style src="@/styles/webplayer.scss" lang="scss" scoped></style>
