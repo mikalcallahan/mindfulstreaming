@@ -9,10 +9,10 @@
     align-items: flex-start;
     border: solid #fff 2px;
     display: flex;
-    height: 60%;
+    height: 40%;
     flex-wrap: wrap;
     justify-content: center;
-    width: 80%;
+    width: 60%;
     .playlist-container {
       align-self: flex-start;
       display: flex;
@@ -26,24 +26,26 @@
     }
     .player {
       justify-self: flex-start;
+      height: 100%;
     }
-    .playlist-list {
-      display: flex;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      list-style-type: none;
-      &:hover {
-        cursor: pointer;
-      }
-      li {
-        text-align: left;
-        width: 100%;
+    .playlist {
+      height: 100%;
+      .playlist-list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        &:hover {
+          cursor: pointer;
+        }
+        li {
+          padding: .5rem;
+          text-align: left;
+          width: 100%;
+        }
       }
     }
   }
 }
-
-
 .controls {
   span {
     padding: 1rem;
@@ -51,4 +53,10 @@
       cursor: pointer;
     }
   }
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }

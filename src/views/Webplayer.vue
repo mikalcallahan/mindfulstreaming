@@ -7,8 +7,9 @@
         <span v-if="showPlayer" @click="togglePlaylist">playlist</span>
         <span v-else @click="togglePlaylist">player</span>
       </div>
-      <section class="player" v-if="showPlayer">
-        <h2 class="song-title">{{ current.artist }} - <span>{{ current.title }}</span></h2>
+      <transition name="fade" mode="out-in">
+      <section key=1 class="player" v-if="showPlayer">
+        <h3 class="song-title">{{ current.artist }} - <span>{{ current.title }}</span></h3>
         <div class="controls">
           <span class="prev" @click="prev">Prev</span>
           <span class="play" v-if="!isPlaying" @click="play">Play</span>
@@ -16,7 +17,7 @@
           <span class="next" @click="next">Next</span>
         </div>
       </section>
-      <section class="playlist" v-else>
+      <section key=2 class="playlist" v-else>
         <h3>Playlist</h3>
         <ul class="playlist-list">
         <li v-for="song in songs" :key="song.src"
@@ -26,7 +27,7 @@
         </li>
         </ul>
       </section>
-
+      </transition>
     </main>
   </div>
 </template>
