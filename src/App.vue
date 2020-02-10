@@ -1,21 +1,37 @@
 <template>
   <div id="app">
+    <!--
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+    -->
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
 body, html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   height: 100%;
   width: 100%;
 }
+
+html {
+  font-size: 62.5%; // 1.0rem = 10px
+}
+
+body {
+  font-family: 'SF Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  'Helvetica Neue', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+  'Droid Sans', sans-serif;
+  font-size: 1.4rem;
+}
+
 #app {
   background-color: #050505;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  // font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

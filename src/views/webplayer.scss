@@ -1,14 +1,15 @@
 .webplayer {
+  align-items: center;
   display: flex;
   color: #E4E4D6;
-  height: 80%;
+  height: 100%;
   justify-content: center;
   width: 100%;
   main {
     align-items: flex-start;
     border: solid #fff 2px;
     display: flex;
-    // height: 100%;
+    height: 60%;
     flex-wrap: wrap;
     justify-content: center;
     width: 80%;
@@ -22,6 +23,9 @@
       span:hover {
         cursor: pointer;
       }
+    }
+    .player {
+      justify-self: flex-start;
     }
     .playlist-list {
       display: flex;

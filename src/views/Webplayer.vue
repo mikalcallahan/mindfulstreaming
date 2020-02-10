@@ -8,7 +8,7 @@
         <span v-else @click="togglePlaylist">player</span>
       </div>
       <section class="player" v-if="showPlayer">
-        <h2 class="song-title">{{ current.title }} - <span>{{ current.artist }}</span></h2>
+        <h2 class="song-title">{{ current.artist }} - <span>{{ current.title }}</span></h2>
         <div class="controls">
           <span class="prev" @click="prev">Prev</span>
           <span class="play" v-if="!isPlaying" @click="play">Play</span>
@@ -20,7 +20,8 @@
         <h3>Playlist</h3>
         <ul class="playlist-list">
         <li v-for="song in songs" :key="song.src"
-        @click="play(song)" :class="(song.src == current.src) ? 'song playing' : 'song'">
+        @click="$store.dispatch('isPlaying'); play(song)"
+        :class="(song.src == current.src) ? 'song playing' : 'song'">
           {{ song.artist }} - {{ song.title }}
         </li>
         </ul>
