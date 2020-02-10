@@ -1,0 +1,50 @@
+.webplayer {
+  display: flex;
+  color: #E4E4D6;
+  height: 80%;
+  justify-content: center;
+  width: 100%;
+  main {
+    align-items: flex-start;
+    border: solid #fff 2px;
+    display: flex;
+    // height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    .playlist-container {
+      align-self: flex-start;
+      display: flex;
+      justify-content: flex-end;
+      justify-self: flex-end;
+      padding: 1rem 2rem 0 0;
+      width: 100%;
+      span:hover {
+        cursor: pointer;
+      }
+    }
+    .playlist-list {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      list-style-type: none;
+      &:hover {
+        cursor: pointer;
+      }
+      li {
+        text-align: left;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+.controls {
+  span {
+    padding: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
