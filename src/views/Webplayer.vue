@@ -1,7 +1,5 @@
 <template>
   <div class="webplayer">
-    <!-- <Webplayer msg="Welcome to Mindfullness"/> -->
-    <!-- <div>this is where the the magic happens</div> -->
     <main>
       <div class="playlist-container">
         <span v-if="showPlayer" @click="togglePlaylist">playlist</span>
@@ -34,11 +32,6 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import {
-  add, isNil, ifElse, not, isEmpty,
-} from 'ramda';
-import { pipe, Observable } from 'rxjs';
-import store from '@/store';
 
 import meditation1 from '@/assets/meditation1.mp3';
 import meditation2 from '@/assets/meditation2.mp3';
